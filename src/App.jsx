@@ -40,8 +40,8 @@ const DIVISIONS = [
     num: "01",
     name: "Electrical Products",
     tagline: "Every circuit, sourced right.",
-    accent: "#C9A227",
-    accentSoft: "#F4E9C8",
+    accent: "#D4AF37",
+    accentSoft: "#F5E7B8",
     icon: Zap,
     photo: IMG_ELECTRICAL,
     blurb:
@@ -73,8 +73,8 @@ const DIVISIONS = [
     num: "02",
     name: "Air Conditioning",
     tagline: "Cooling built for extremes.",
-    accent: "#1C8C99",
-    accentSoft: "#CDEBEC",
+    accent: "#B8860B",
+    accentSoft: "#F0E0AE",
     icon: Snowflake,
     photo: IMG_AC,
     blurb:
@@ -106,8 +106,8 @@ const DIVISIONS = [
     num: "03",
     name: "Medical Supplies",
     tagline: "Care equipment you can trust.",
-    accent: "#A62639",
-    accentSoft: "#F2D6DA",
+    accent: "#8C6B1F",
+    accentSoft: "#EDE0BC",
     icon: Stethoscope,
     photo: IMG_MEDICAL,
     blurb:
@@ -138,8 +138,8 @@ const DIVISIONS = [
     num: "04",
     name: "Garments & Textiles",
     tagline: "Uniforms, fabric, identity.",
-    accent: "#5C3A73",
-    accentSoft: "#E3D7EC",
+    accent: "#A8821A",
+    accentSoft: "#EFE2B0",
     icon: Shirt,
     photo: IMG_GARMENTS,
     blurb:
@@ -212,12 +212,12 @@ const WHY_US = [
   "Customer-centric approach tailored to business needs",
 ];
 
-const NAVY = "#0B0908";
-const NAVY_SOFT = "#171310";
-const PAPER = "#F5F0E6";
-const INK = "#1C1712";
-const GOLD = "#C1652E";
-const AMBER = "#E8A54B";
+const NAVY = "#0A0A0A";
+const NAVY_SOFT = "#161616";
+const PAPER = "#FAFAF8";
+const INK = "#141414";
+const GOLD = "#E8A317";
+const AMBER = "#F5C247";
 
 /* ------------------------------------------------------------------ */
 /*  Scroll reveal helper                                               */
@@ -353,10 +353,10 @@ export default function App() {
         .div-panel { animation: fadeSwitch 0.5s cubic-bezier(.2,.7,.3,1) both; }
 
         .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -12px rgba(11,9,8,0.22); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -12px rgba(0,0,0,0.35); }
 
         .partner-card { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
-        .partner-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -12px rgba(11,9,8,0.22); }
+        .partner-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -12px rgba(0,0,0,0.35); }
         .partner-card:hover .partner-arrow { transform: translateX(4px); opacity: 1; }
         .partner-arrow { transition: transform 0.25s ease, opacity 0.25s ease; opacity: 0.5; }
 
@@ -376,20 +376,20 @@ export default function App() {
         .nav-link:hover::after { width: 100%; }
 
         .profile-btn { transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
-        .profile-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px -10px rgba(11,9,8,0.35); }
+        .profile-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px -10px rgba(0,0,0,0.45); }
 
         @media (prefers-reduced-motion: reduce) {
           .hero-anim > *, .div-panel, .card-hover, .partner-card { animation: none !important; transition: none !important; }
         }
 
-        ::selection { background: ${GOLD}; color: ${NAVY}; }
+        ::selection { background: ${GOLD}; color: #fff; }
       `}</style>
 
       {/* --------------------------------------------------------- NAV */}
       <header
         className="fixed top-0 left-0 w-full z-50"
         style={{
-          background: scrolled ? "rgba(11,9,8,0.92)" : "transparent",
+          background: scrolled ? "rgba(10,10,10,0.94)" : "transparent",
           backdropFilter: scrolled ? "blur(10px)" : "none",
           borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
           transition: "all 0.35s ease",
@@ -414,7 +414,7 @@ export default function App() {
     <button
       onClick={() => handleNav("Contact")}
       className="px-4 py-2 rounded-md text-sm font-medium display whitespace-nowrap"
-      style={{ background: GOLD, color: NAVY }}
+      style={{ background: GOLD, color: "#0A0A0A" }}
     >
       Get a Quote
     </button>
@@ -458,7 +458,7 @@ export default function App() {
             <linearGradient id="ribbonGrad" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor={AMBER} />
               <stop offset="55%" stopColor={GOLD} />
-              <stop offset="100%" stopColor="#7A3418" />
+              <stop offset="100%" stopColor="#8A6210" />
             </linearGradient>
             <filter id="ribbonGlow" x="-50%" y="-50%" width="200%" height="200%">
               <feGaussianBlur stdDeviation="18" result="blur" />
@@ -513,7 +513,7 @@ export default function App() {
               <button
                 onClick={() => scrollTo("contact")}
                 className="group px-6 py-3 rounded-full font-medium display flex items-center gap-2"
-                style={{ background: GOLD, color: "#fff" }}
+                style={{ background: GOLD, color: "#0A0A0A" }}
               >
                 Request a Quote
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -582,7 +582,7 @@ export default function App() {
             <h2 className="display font-semibold mt-4 leading-tight" style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: NAVY }}>
               A one-stop trading partner since day one.
             </h2>
-            <p className="mt-6 text-base md:text-lg leading-relaxed" style={{ color: "#4A4136" }}>
+            <p className="mt-6 text-base md:text-lg leading-relaxed" style={{ color: "#4D4D4D" }}>
               Dar Al Zahra General Trading LLC is a premier multi-sector trading company
               headquartered in Dubai, United Arab Emirates. Our portfolio spans four core
               divisions, making us a comprehensive partner for businesses, contractors,
@@ -590,16 +590,16 @@ export default function App() {
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 mt-10">
-              <div className="p-5 rounded-lg" style={{ background: "#fff", border: "1px solid #E6DDCC" }}>
+              <div className="p-5 rounded-lg" style={{ background: "#fff", border: "1px solid #E3E3E3" }}>
                 <p className="mono text-sm md:text-base font-bold uppercase tracking-widest" style={{ color: GOLD }}>Vision</p>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#4A4136" }}>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#4D4D4D" }}>
                   To be the most trusted and preferred general trading company in the UAE
                   and the GCC, recognized for quality, integrity and customer satisfaction.
                 </p>
               </div>
-              <div className="p-5 rounded-lg" style={{ background: "#fff", border: "1px solid #E6DDCC" }}>
+              <div className="p-5 rounded-lg" style={{ background: "#fff", border: "1px solid #E3E3E3" }}>
                 <p className="mono text-sm md:text-base font-bold uppercase tracking-widest" style={{ color: GOLD }}>Mission</p>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#4A4136" }}>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "#4D4D4D" }}>
                   To deliver superior products through strong supplier relationships,
                   competitive pricing, timely delivery and exceptional after-sales support.
                 </p>
@@ -608,7 +608,7 @@ export default function App() {
           </Reveal>
 
           <Reveal delay={0.15} className="md:col-span-2">
-            <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #E6DDCC" }}>
+            <div className="rounded-xl overflow-hidden" style={{ border: "1px solid #E3E3E3" }}>
               {[
                 ["Company", "Dar Al Zahra General Trading LLC"],
                 ["Location", "Dubai, United Arab Emirates"],
@@ -619,10 +619,10 @@ export default function App() {
                 <div
                   key={k}
                   className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 px-5 py-4 text-sm"
-                  style={{ background: i % 2 === 0 ? "#fff" : "#FAF6EC", borderTop: i === 0 ? "none" : "1px solid #E6DDCC" }}
+                  style={{ background: i % 2 === 0 ? "#fff" : "#F5F5F3", borderTop: i === 0 ? "none" : "1px solid #E3E3E3" }}
                 >
                   <span className="mono uppercase tracking-wide text-xs w-36 shrink-0" style={{ color: NAVY }}>{k}</span>
-                  <span style={{ color: "#4A4136" }}>{v}</span>
+                  <span style={{ color: "#4D4D4D" }}>{v}</span>
                 </div>
               ))}
             </div>
@@ -654,8 +654,8 @@ export default function App() {
                     className="tab-btn flex items-center gap-2 px-4 py-3 rounded-lg border display text-sm"
                     style={{
                       background: active ? GOLD : "#fff",
-                      borderColor: active ? GOLD : "#E6DDCC",
-                      color: active ? "#fff" : INK,
+                      borderColor: active ? GOLD : "#E3E3E3",
+                      color: active ? "#0A0A0A" : INK,
                       fontWeight: active ? 600 : 500,
                     }}
                   >
@@ -669,7 +669,7 @@ export default function App() {
           </Reveal>
 
           {/* Panel */}
-          <div key={current.id} className="div-panel mt-10 rounded-2xl p-6 md:p-10" style={{ background: `linear-gradient(135deg, ${GOLD} 0%, #9C4A20 100%)`, border: `1px solid ${GOLD}` }}>
+          <div key={current.id} className="div-panel mt-10 rounded-2xl p-6 md:p-10" style={{ background: `linear-gradient(135deg, #1A1A1A 0%, ${NAVY} 100%)`, border: `1px solid ${GOLD}` }}>
             <div className="grid md:grid-cols-5 gap-10">
               <div className="md:col-span-2">
                 <div
@@ -684,21 +684,21 @@ export default function App() {
                 </div>
                 <div
                   className="w-14 h-14 rounded-xl flex items-center justify-center"
-                  style={{ background: "rgba(255,255,255,0.18)" }}
+                  style={{ background: "rgba(232,163,23,0.18)" }}
                 >
-                  <current.icon size={26} style={{ color: "#fff" }} />
+                  <current.icon size={26} style={{ color: GOLD }} />
                 </div>
                 <h3 className="display text-white font-semibold text-2xl mt-5">{current.name}</h3>
-                <p className="mt-1 text-sm display" style={{ color: "#fff" }}>{current.tagline}</p>
-                <p className="mt-4 text-sm leading-relaxed text-white/80">{current.blurb}</p>
+                <p className="mt-1 text-sm display" style={{ color: GOLD }}>{current.tagline}</p>
+                <p className="mt-4 text-sm leading-relaxed text-white/70">{current.blurb}</p>
 
-                <p className="mono text-xs uppercase tracking-widest text-white/60 mt-8 mb-3">Key Brands</p>
+                <p className="mono text-xs uppercase tracking-widest text-white/50 mt-8 mb-3">Key Brands</p>
                 <div className="flex flex-wrap gap-2">
                   {current.brands.map((b) => (
                     <span
                       key={b}
                       className="text-xs px-3 py-1.5 rounded-full text-white/90"
-                      style={{ border: "1px solid rgba(255,255,255,0.3)" }}
+                      style={{ border: "1px solid rgba(255,255,255,0.25)" }}
                     >
                       {b}
                     </span>
@@ -711,10 +711,10 @@ export default function App() {
                   <div
                     key={name}
                     className="card-hover p-4 rounded-lg"
-                    style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)" }}
+                    style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(232,163,23,0.25)" }}
                   >
                     <p className="text-white font-medium text-sm display">{name}</p>
-                    <p className="text-white/70 text-xs mt-1.5 leading-relaxed">{desc}</p>
+                    <p className="text-white/60 text-xs mt-1.5 leading-relaxed">{desc}</p>
                   </div>
                 ))}
               </div>
@@ -738,9 +738,9 @@ export default function App() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
             {WHY_US.map((point, i) => (
               <Reveal key={point} delay={(i % 4) * 0.08}>
-                <div className="card-hover h-full p-5 rounded-lg" style={{ background: "#fff", border: "1px solid #E6DDCC" }}>
+                <div className="card-hover h-full p-5 rounded-lg" style={{ background: "#fff", border: "1px solid #E3E3E3" }}>
                   <CheckCircle2 size={20} style={{ color: GOLD }} />
-                  <p className="mt-3 text-sm leading-relaxed" style={{ color: "#4A4136" }}>{point}</p>
+                  <p className="mt-3 text-sm leading-relaxed" style={{ color: "#4D4D4D" }}>{point}</p>
                 </div>
               </Reveal>
             ))}
@@ -767,7 +767,7 @@ export default function App() {
             <a
               href="mailto:sales@dazllc.com"
               className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-md font-medium display"
-              style={{ background: GOLD, color: NAVY }}
+              style={{ background: GOLD, color: "#0A0A0A" }}
             >
               Email Sales <ChevronRight size={16} />
             </a>
@@ -787,7 +787,7 @@ export default function App() {
                   className="flex items-center gap-4 px-5 py-4"
                   style={{ background: i % 2 === 0 ? "rgba(255,255,255,0.03)" : "transparent", borderTop: i === 0 ? "none" : "1px solid rgba(255,255,255,0.08)" }}
                 >
-                  <Icon size={18} style={{ color: AMBER }} />
+                  <Icon size={18} style={{ color: GOLD }} />
                   <div>
                     <p className="mono text-[11px] uppercase tracking-wide text-white/40">{label}</p>
                     <p className="text-white text-sm mt-0.5">{value}</p>
@@ -800,7 +800,7 @@ export default function App() {
       </section>
 
       {/* --------------------------------------------------------- FOOTER */}
-      <footer className="px-5 md:px-8 py-8 text-center" style={{ background: "#0A1420" }}>
+      <footer className="px-5 md:px-8 py-8 text-center" style={{ background: "#000000" }}>
         <p className="text-white/40 text-xs mono">
           © {new Date().getFullYear()} Dar Al Zahra General Trading LLC — Dubai, UAE
         </p>
@@ -858,13 +858,13 @@ function CompaniesPage({ onBack }) {
             <div
               key={c.id}
               className="rounded-2xl overflow-hidden grid md:grid-cols-5"
-              style={{ background: "#fff", border: "1px solid #E6DDCC" }}
+              style={{ background: "#fff", border: "1px solid #E3E3E3" }}
             >
               <div className="md:col-span-2 h-56 md:h-auto overflow-hidden" style={{ background: NAVY }}>
                 <img src={c.photo} alt={c.name} className="w-full h-full object-contain" />
               </div>
               <div className="md:col-span-3 p-6 md:p-10">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: "#F4E9C8" }}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: "#F5E7B8" }}>
                   <Building2 size={22} style={{ color: GOLD }} />
                 </div>
                 <h2 className="display font-semibold text-2xl mt-5" style={{ color: NAVY }}>
@@ -873,10 +873,10 @@ function CompaniesPage({ onBack }) {
                 <p className="mono text-xs uppercase tracking-widest mt-1" style={{ color: GOLD }}>
                   {c.location}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed" style={{ color: "#4A4136" }}>
+                <p className="mt-4 text-sm leading-relaxed" style={{ color: "#4D4D4D" }}>
                   {c.description}
                 </p>
-                <div className="flex flex-wrap gap-x-6 gap-y-2 mt-6 text-sm" style={{ color: "#4A4136" }}>
+                <div className="flex flex-wrap gap-x-6 gap-y-2 mt-6 text-sm" style={{ color: "#4D4D4D" }}>
                   {c.phone && (
                     <span className="flex items-center gap-2">
                       <Phone size={14} style={{ color: GOLD }} /> {c.phone}
@@ -900,7 +900,7 @@ function CompaniesPage({ onBack }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="profile-btn inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-md font-medium display text-sm"
-                    style={{ background: GOLD, color: "#fff" }}
+                    style={{ background: GOLD, color: "#0A0A0A" }}
                   >
                     <FileText size={16} /> View Profile
                   </a>
@@ -917,7 +917,7 @@ function CompaniesPage({ onBack }) {
             <h3 className="display font-semibold mt-3 leading-tight" style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)", color: NAVY }}>
               Manufacturers ETS works with directly.
             </h3>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: "#4A4136" }}>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: "#4D4D4D" }}>
               Met on-site at their facilities and at industry events like Arab Health —
               use the arrows to browse.
             </p>
@@ -940,7 +940,7 @@ function CompaniesPage({ onBack }) {
                   onClick={prevCollab}
                   aria-label="Previous collaboration"
                   className="collab-arrow-btn absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(11,9,8,0.65)", border: "1px solid rgba(255,255,255,0.25)" }}
+                  style={{ background: "rgba(0,0,0,0.7)", border: "1px solid rgba(255,255,255,0.25)" }}
                 >
                   <ChevronLeft size={20} className="text-white" />
                 </button>
@@ -948,7 +948,7 @@ function CompaniesPage({ onBack }) {
                   onClick={nextCollab}
                   aria-label="Next collaboration"
                   className="collab-arrow-btn absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(11,9,8,0.65)", border: "1px solid rgba(255,255,255,0.25)" }}
+                  style={{ background: "rgba(0,0,0,0.7)", border: "1px solid rgba(255,255,255,0.25)" }}
                 >
                   <ChevronRight size={20} className="text-white" />
                 </button>
@@ -984,7 +984,7 @@ function CompaniesPage({ onBack }) {
       </section>
 
       {/* Footer */}
-      <footer className="px-5 md:px-8 py-8 text-center" style={{ background: "#0A1420" }}>
+      <footer className="px-5 md:px-8 py-8 text-center" style={{ background: "#000000" }}>
         <p className="text-white/40 text-xs mono">
           © {new Date().getFullYear()} Dar Al Zahra General Trading LLC — Dubai, UAE
         </p>
