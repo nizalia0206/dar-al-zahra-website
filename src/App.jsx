@@ -166,7 +166,13 @@ const COMPANIES = [
     photo: IMG_COMPANY_ETS,
     description:
       "ETS is a leading distributor of premium laboratory and medical equipment, serving government hospitals, private healthcare institutions and research laboratories across the region. Its portfolio spans diagnostic analyzers, blood bank automation, cold chain equipment, laboratory disposables and laboratory furniture, all backed by factory-certified technical support and training.",
-    phone: "+966 (0)13 8190064",
+    phones: [
+      { icon: "☎️", value: "+966 (0)13 8190064" },
+      { icon: "☎️", value: "+966 (0)13 8819992" },
+      { icon: "📱", value: "+966595599948" },
+      { icon: "📱", value: "+966501278615" },
+      { icon: "📱", value: "+971503451489 (UAE)" },
+    ],
     email: "info@etsksa.com",
     website: "www.etsksa.com",
     profilePdf: "/ets-profile.pdf",
@@ -877,23 +883,22 @@ function CompaniesPage({ onBack }) {
                   {c.description}
                 </p>
                 <div className="flex flex-wrap gap-x-6 gap-y-2 mt-6 text-sm" style={{ color: "#4D4D4D" }}>
-                  {c.phone && (
-                    <span className="flex items-center gap-2">
-                      <Phone size={14} style={{ color: GOLD }} /> {c.phone}
-                    </span>
-                  )}
-                  {c.email && (
-                    <span className="flex items-center gap-2">
-                      <Mail size={14} style={{ color: GOLD }} /> {c.email}
-                    </span>
-                  )}
-                  {c.website && (
-                    <span className="flex items-center gap-2">
-                      <ArrowRight size={14} style={{ color: GOLD }} /> {c.website}
-                    </span>
-                  )}
-                </div>
-
+  {c.phones && c.phones.map((p, i) => (
+    <span key={i} className="flex items-center gap-2">
+      <span>{p.icon}</span> {p.value}
+    </span>
+  ))}
+  {c.email && (
+    <span className="flex items-center gap-2">
+      <Mail size={14} style={{ color: GOLD }} /> {c.email}
+    </span>
+  )}
+  {c.website && (
+    <span className="flex items-center gap-2">
+      <ArrowRight size={14} style={{ color: GOLD }} /> {c.website}
+    </span>
+  )}
+</div>
                 {c.profilePdf && (
                   <a
                     href={c.profilePdf}
